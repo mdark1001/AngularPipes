@@ -1,20 +1,153 @@
 <!--The whole content below can be removed with the new code.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=" />
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
-  </li>
-</ul>
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>
+        Original
+      </th>
+      <th>
+          Pipe
+      </th>
+      <th>
+          Resultado
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
 
+      <td>{{nombre}}</td>
+      <td>uppercase</td>
+      <td>{{nombre | uppercase}}</td>
+    </tr>
+    <tr>
+
+      <td>{{nombre}}</td>
+      <td>lowercase</td>
+      <td>{{nombre | lowercase}}</td>
+    </tr>
+    <tr>
+
+      <td>{{nombre}}</td>
+      <td>slice:3 </td>
+      <td>{{nombre | slice:3}}</td>
+    </tr>
+
+    <tr>
+
+      <td>{{nombre}}</td>
+      <td>slice </td>
+      <td>{{nombre | slice:0:5}}</td>
+    </tr>
+    <tr>
+
+      <td>{{areglo}}</td>
+      <td>slice </td>
+      <td>{{areglo   | slice:0:5}}</td>
+    </tr>
+    <tr>
+
+      <td>{{PI}}</td>
+      <td>number:'3.2-2' </td>
+      <td>{{PI   | number:'3.2-2'}}</td>
+    </tr>
+    <tr>
+
+      <td>{{PI}}</td>
+      <td>number:'1.4-4' </td>
+      <td>{{PI   | number:'1.4-4'}}</td>
+    </tr>
+    <tr>
+
+      <td>{{porcentaje}}</td>
+      <td>percent:'2.4-4' </td>
+      <td>{{porcentaje   | percent:'2.4-4'}}</td>
+    </tr>
+    <tr>
+
+      <td>{{porcentaje}}</td>
+      <td>percent:'2.2-2' </td>
+      <td>{{porcentaje   | percent:'2.2-2'}}</td>
+    </tr>
+    <tr>
+
+      <td>{{salario}}</td>
+      <td>currency </td>
+      <td>{{salario   | currency}}</td>
+    </tr>
+    <tr>
+
+      <td>{{salario}}</td>
+      <td>currency:'EUR':true </td>
+      <td>{{salario   | currency:'EUR':true}}</td>
+    </tr>
+    <tr>
+
+      <td>{{salario}}</td>
+      <td>currency:'EUR':true </td>
+      <td>{{salario   | currency:'EUR':true:'.0-0'}}</td>
+    </tr>
+    <tr>
+
+      <td>{{valorDePromesa}}</td>
+      <td>async </td>
+      <td>{{valorDePromesa | async}}</td>
+    </tr>
+    <tr>
+      <td>{{fecha}}</td>
+        <td>date</td>
+      <td>{{fecha | date}}</td>
+    </tr>
+    <tr>
+      <td>{{fecha}}</td>
+        <td>date</td>
+      <td>{{fecha | date:'medium'}}</td>
+    </tr>
+    <tr>
+      <td>{{fecha}}</td>
+        <td>date</td>
+      <td>{{fecha | date}}</td>
+    </tr>
+    <tr>
+
+      <td>
+        {{nombre2}}
+      </td>
+      <td>
+        Capitalizado
+      </td>
+      <td>
+        {{nombre2 | capitalizado:false}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{nombre}}
+      </td>
+      <td>
+          Contraseña {{activar}}
+          <br>
+          <button type="button" class="btn btn-primary" (click)="activar=!activar">Activar/Desactivar</button>
+      </td>
+        <td>
+            {{nombre |contrasena:activar}}
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Slice</h4>
+<ul>
+  <li *ngFor="let item of areglo | slice:0:5 ">{{item}}</li>
+
+</ul>
+<h4>
+    JSON
+</h4>
+<pre>
+  {{heroe | json}}
+</pre>
+
+<h4>Youtube</h4> <small>Video:</small>
+
+<iframe width="854" height="480" [src]="video | domseguro:'https://www.youtube.com/embed/'" frameborder="0" allowfullscreen></iframe>
